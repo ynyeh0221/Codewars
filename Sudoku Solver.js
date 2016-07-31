@@ -24,14 +24,11 @@ function isvaild(i, j, puzzle, num)
 
 function sudoku(puzzle) {
   //return the solved puzzle as a 2d array of 9 x 9 
-  let res = [];
   let flag = 0;
   function dfs(puzzle, index)
   {
     if (index > 80)
     {
-      if (flag === 0)
-        res = puzzle.slice();
       flag = 1;
       return;
     }
@@ -50,5 +47,5 @@ function sudoku(puzzle) {
       puzzle[i][j] = 0;
   }
   dfs(puzzle, 0)
-  return res
+  return puzzle
 }
