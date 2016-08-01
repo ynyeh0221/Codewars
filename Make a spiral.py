@@ -15,7 +15,6 @@ def spiralize(size):
         matrix[size-1][j] = 1
     matrix[1][0] = 0
     dfs(2,1,matrix,'r')
-    print matrix
     return matrix
     
 def dfs(i, j, matrix, dir):
