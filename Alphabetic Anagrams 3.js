@@ -35,7 +35,7 @@ function listPosition(word) {
         wlist = wlist.slice(1, wlist.length);
         continue;
     }
-    res += f / n * ind;
+    res += f * ind / n;
     wlist = wlist.slice(0, ind).concat(wlist.slice(ind + 1, wlist.length));
   }
   return res;
