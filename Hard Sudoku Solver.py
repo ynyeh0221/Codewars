@@ -1,7 +1,5 @@
 def dfs(board, index):
     global flag, row, col, block
-    if flag == 1:
-        return
     if index > 80:
         flag = 1
         return
