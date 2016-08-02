@@ -15,10 +15,10 @@ function repeat_product(s)
       counter[s[i]] = 0;
     counter[s[i]] += 1;
   }
-  let rp = 1;
+  let res = 1;
   for (let k in counter)
-    rp *= factorial(counter[k]);
-  return rp;
+    res *= factorial(counter[k]);
+  return res;
 }
 
 function listPosition(word) {
