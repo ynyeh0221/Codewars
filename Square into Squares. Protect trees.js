@@ -1,4 +1,4 @@
-// timeout when n = 7100
+// Maximum call stack size exceeded when n = 7100
 
 function decompose(n) {
     // your code
