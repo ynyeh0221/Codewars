@@ -4,7 +4,6 @@ var Sudoku = function(data)
   // -------------------------
   this.N = data.length;
   this.data = data;
-
   //   Public methods
   // -------------------------
   this.isValid = function() {
