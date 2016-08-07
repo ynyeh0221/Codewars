@@ -1,5 +1,3 @@
-// timeout
-
 function iterPi(epsilon) {
 	// your code
   let estimate = 1;
