@@ -1,0 +1,7 @@
+function sc(a){
+  for (i = 0; i < a.length; i++)
+  {
+    j = a[i].indexOf('B')
+    if (j > -1) return [i, j]
+  }
+}
