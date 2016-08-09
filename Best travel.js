@@ -1,5 +1,4 @@
 function chooseBestSum(t, k, ls) {
-    // your code
     if (ls.length < 3)
       return null;
     let res = 0;
