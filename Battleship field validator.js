@@ -50,7 +50,7 @@ function validateBattlefield(field) {
       return false;
     delete ships[k];
   }
-  for (let k in ships)
+  for (let k in ships) // if there is any ship remaining
     return false;
   return true;
 }
