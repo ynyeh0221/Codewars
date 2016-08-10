@@ -3,7 +3,6 @@
  * @param {Number} len - line length
  */
 var justify = function(str, len) {
-  // Your code goes here
   str = str.replace(/\n/g, ' ')
   str = str.split(' ');
   let res = [], words = 0, line = [];
