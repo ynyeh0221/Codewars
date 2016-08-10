@@ -1,5 +1,4 @@
 function compose(s1, s2) {
-    // your code
     s1 = s1.split('\n');
     s2 = s2.split('\n');
     let res = "", n = s1.length;
