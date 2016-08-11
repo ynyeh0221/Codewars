@@ -1,4 +1,5 @@
 function hamming (n) {
+  // TODO: Program me
   let res = [1], visited = {};
   let i2 = 0, i3 = 0, i5 = 0;
   for (let i = 1; i < n; i++)
