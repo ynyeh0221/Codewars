@@ -1,7 +1,6 @@
 skip = {'a': 1, 'the': 1, 'on': 1, 'at': 1, 'of':1, 'upon': 1, 'in': 1, 'as': 1}
 
 def word_count(s):
-    # count words, which s contains
     num = 0
     start = 0
     i = 0
