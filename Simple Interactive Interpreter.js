@@ -22,7 +22,7 @@ Interpreter.prototype.input = function(expr)
     var tokens = this.tokenize(expr);
     if (tokens.length == 0)
       return '';
-    let op = '+', preops = []; // preops for parentheses
+    let op = '+', preops = []; // preops is for parentheses
     let unassigned_vars = [], nest_vars = null, is_nest = false; // nest vars should be assigned first.
     let stack = [];
     let digit = 0;
