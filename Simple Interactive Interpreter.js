@@ -133,8 +133,8 @@ Interpreter.prototype.input = function(expr)
           if (tokens[i+1] != '=')
             stack.push(this.vars[tokens[i]]);
           else
-            if (is_nest)
-              nest_vars = tokens[i];
+            if (is_nest) // For nest assignment
+              nest_vars = tokens[i]; // For basic and chain assignment
             else
               unassigned_vars.push(tokens[i]);
         }
