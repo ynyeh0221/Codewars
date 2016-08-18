@@ -29,10 +29,7 @@ function validateBattlefield(field) {
         direction = field[i][j+1] == 1 ? 'r' : 'd';
         dfs(i, j, field, direction);
         if (invalid == true)
-        {
           return false;
-          invalid = false;
-        }
       }
       if (len > 0)
       {
