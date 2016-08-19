@@ -6,6 +6,5 @@ function factorial (n){
 }
 
 function numberOfRoutes(m, n){
-  // Good Luck!
   return factorial(m+n)/(factorial(m) * factorial(n));
 }
