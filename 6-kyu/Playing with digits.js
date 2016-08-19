@@ -1,5 +1,4 @@
 function digPow(n, p){
-  // ...
   let strn = n.toString();
   let sum = 0;
   for (let i = 0; i < strn.length; i++)
