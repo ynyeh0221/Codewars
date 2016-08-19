@@ -36,5 +36,3 @@ function arrange(strng) {
     }
     return res;
 }
-Best Practices0Clever0
-0ForkCompare with your solutionLink
