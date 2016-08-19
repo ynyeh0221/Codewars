@@ -1,5 +1,4 @@
 function houseOfCards(floors){
-  //good luck!
   if (typeof floors != 'number' || floors < 1 || parseInt(floors) != floors)
     throw new Error("Error");
   let v = 2
