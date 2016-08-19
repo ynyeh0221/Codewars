@@ -1,13 +1,8 @@
 var Sudoku = function(data) 
 {
-  //   Private methods
-  // -------------------------
   this.N = data.length;
   this.data = data;
-  //   Public methods
-  // -------------------------
   this.isValid = function() {
-      // YOUR SOLUTION
       console.log(this.data)
       for (let i = 0; i < this.data.length; i ++)
       {
