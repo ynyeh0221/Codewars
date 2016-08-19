@@ -1,6 +1,5 @@
 function getCard()
 {
-  // Write your code here...
   let num = [];
   while (num.length < 5)
   {
