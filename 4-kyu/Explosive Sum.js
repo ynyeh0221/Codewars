@@ -15,13 +15,9 @@ var sum = function(number)
       return 1;
     if (n1 < 0)
       return 0;
-    let res = T[n1][n2];
-    if (!res)
-    {
-      res = calc(n1-n2, n2) + calc(n1, n2-1);
-      T[n1][n2] = res;
-    }
-    return res;
+    if (!T[n1][n2])
+      T[n1][n2] = calc(n1-n2, n2) + calc(n1, n2-1);
+    return T[n1][n2];
   }
   return calc(number, number);
 }
