@@ -38,5 +38,3 @@ function connectFour(board) {
   }
   return winner ? winner : num == board.length * board[0].length ? 'draw' : 'in progress';
 }
-Best Practices0Clever0
-0ForkCompare with your solutionLink
