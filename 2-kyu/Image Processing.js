@@ -79,7 +79,6 @@ function processImage(imageData, height, width, weights){
       {
         for (let l = 0; l < weights.length; l++)
         {
-          console.log(1)
           afterr[i-istart][j-jstart] += newr[i-ww+k][j-ww+l] * weights[k][l];
           afterb[i-istart][j-jstart] += newb[i-ww+k][j-ww+l] * weights[k][l];
           afterg[i-istart][j-jstart] += newg[i-ww+k][j-ww+l] * weights[k][l];
