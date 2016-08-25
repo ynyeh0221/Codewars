@@ -1,5 +1,4 @@
 function getCommands(field, power) {
-  // insert awesome code here
   var n = Math.sqrt(field.length);
   var starti = 0, startj = 0, endi = 0, endj = 0;
   for (let i = 0; i < n; i++)
