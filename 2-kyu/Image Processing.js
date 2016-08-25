@@ -2,9 +2,7 @@ function processImage(imageData, height, width, weights){
   let r = [[]], g = [[]], b = [[]];
   for (let i = 0; i < imageData.length; i += 3)
   {
-    r[r.length-1].push(imageData[i]);
-    g[g.length-1].push(imageData[i+1]);
-    b[b.length-1].push(imageData[i+2]);
+    r[r.length-1].push(imageData[i]); g[g.length-1].push(imageData[i+1]); b[b.length-1].push(imageData[i+2]);
     if (r[r.length-1].length == width && i + 3 < imageData.length)
     {
       r.push([]); g.push([]); b.push([]);
