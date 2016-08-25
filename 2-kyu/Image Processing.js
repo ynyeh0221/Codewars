@@ -1,6 +1,6 @@
 function processImage(imageData, height, width, weights){
   let r = [[]], g = [[]], b = [[]];
-  for (let i = 0; i < imageData.length; i += 3)
+  for (let i = 0; i < imageData.length; i += 3) // Save R, G, B dat into matrix r, g, b, respectively
   {
     r[r.length-1].push(imageData[i]); g[g.length-1].push(imageData[i+1]); b[b.length-1].push(imageData[i+2]);
     if (r[r.length-1].length == width && i + 3 < imageData.length)
@@ -11,7 +11,7 @@ function processImage(imageData, height, width, weights){
   let ww = Math.floor(weights.length / 2);
   let new_width = 2 * ww + width, new_height = 2 * ww + height;
   let newr = [], newg = [], newb = [], istart = Math.floor(weights.length / 2), jstart = Math.floor(weights[0].length / 2);
-  for (let i = 0; i < new_height; i++)
+  for (let i = 0; i < new_height; i++) // Create new matrix newr, newg, newb by extended the edges of the original matrix r, g, b to deal with the edge and corner
   {
     newr.push([]); newg.push([]); newb.push([]);
     for (let j = 0; j < new_width; j++)
@@ -73,22 +73,22 @@ function processImage(imageData, height, width, weights){
     {
       for (let k = 0; k < weights.length; k++)
       {
-        for (let l = 0; l < weights.length; l++)
+        for (let l = 0; l < weights.length; l++) // weighting
         {
           afterr[i-istart][j-jstart] += newr[i-ww+k][j-ww+l] * weights[k][l];
           afterb[i-istart][j-jstart] += newb[i-ww+k][j-ww+l] * weights[k][l];
           afterg[i-istart][j-jstart] += newg[i-ww+k][j-ww+l] * weights[k][l];
         }
       }
-      afterr[i-istart][j-jstart] = Math.round(afterr[i-istart][j-jstart]);
+      afterr[i-istart][j-jstart] = Math.round(afterr[i-istart][j-jstart]); // important
       afterg[i-istart][j-jstart] = Math.round(afterg[i-istart][j-jstart]);
       afterb[i-istart][j-jstart] = Math.round(afterb[i-istart][j-jstart]);
-      afterr[i-istart][j-jstart] = afterr[i-istart][j-jstart] < 0 ? 0 : afterr[i-istart][j-jstart] > 255 ? 255 : afterr[i-istart][j-jstart];
+      afterr[i-istart][j-jstart] = afterr[i-istart][j-jstart] < 0 ? 0 : afterr[i-istart][j-jstart] > 255 ? 255 : afterr[i-istart][j-jstart]; // important
       afterg[i-istart][j-jstart] = afterg[i-istart][j-jstart] < 0 ? 0 : afterg[i-istart][j-jstart] > 255 ? 255 : afterg[i-istart][j-jstart];
       afterb[i-istart][j-jstart] = afterb[i-istart][j-jstart] < 0 ? 0 : afterb[i-istart][j-jstart] > 255 ? 255 : afterb[i-istart][j-jstart];
     }
   }
-  let res = [];
+  let res = []; // convert afterr, afterg, afterb into the output form and return
   for (let i = 0; i < height; i++)
   {
     for (let j = 0; j < width; j++)
