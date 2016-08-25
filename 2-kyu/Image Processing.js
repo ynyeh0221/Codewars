@@ -1,5 +1,3 @@
-// There is something wrong of the ''run test'' and ''submit'' functions of this data
-
 function processImage(imageData, height, width, weights){
   let r = [[]], g = [[]], b = [[]];
   for (let i = 0; i < imageData.length; i += 3)
@@ -84,6 +82,12 @@ function processImage(imageData, height, width, weights){
           afterg[i-istart][j-jstart] += newg[i-ww+k][j-ww+l] * weights[k][l];
         }
       }
+      afterr[i-istart][j-jstart] = Math.round(afterr[i-istart][j-jstart]);
+      afterg[i-istart][j-jstart] = Math.round(afterg[i-istart][j-jstart]);
+      afterb[i-istart][j-jstart] = Math.round(afterb[i-istart][j-jstart]);
+      afterr[i-istart][j-jstart] = afterr[i-istart][j-jstart] < 0 ? 0 : afterr[i-istart][j-jstart] > 255 ? 255 : afterr[i-istart][j-jstart];
+      afterg[i-istart][j-jstart] = afterg[i-istart][j-jstart] < 0 ? 0 : afterg[i-istart][j-jstart] > 255 ? 255 : afterg[i-istart][j-jstart];
+      afterb[i-istart][j-jstart] = afterb[i-istart][j-jstart] < 0 ? 0 : afterb[i-istart][j-jstart] > 255 ? 255 : afterb[i-istart][j-jstart];
     }
   }
   let res = [];
