@@ -6,6 +6,17 @@ Compiler.prototype.compile = function (program) {
 
 var operators = {'+': 2, '-': 2, '*': 1, '/': 1};
 
+let eval = function (a, b, op) {
+    if (op == '+')
+        return a + b;
+    else if (op == '-')
+        return a - b;
+    else if (op == '*')
+        return a * b;
+    else
+        return a / b;
+}
+
 Compiler.prototype.tokenize = function (program) {
   // Turn a program string into an array of tokens.  Each token
   // is either '[', ']', '(', ')', '+', '-', '*', '/', a variable
@@ -69,17 +80,6 @@ Compiler.prototype.pass1 = function (program) {
     }
     return dstack[0];
 };
-
-Compiler.prototype.eval = function (a, b, op) {
-    if (op == '+')
-        return a + b;
-    else if (op == '-')
-        return a - b;
-    else if (op == '*')
-        return a * b;
-    else
-        return a / b;
-}
 
 Compiler.prototype.pass2 = function (x) {
     if ((x.op !== 'arg') && (x.op !== 'imm'))
