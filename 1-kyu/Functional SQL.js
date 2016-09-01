@@ -139,7 +139,6 @@ query.prototype.execute = function()
       }
       temp.push(res[j]);
     }
-    console.log(dic)
     res = toarr(dic);
   }
   if (this.selectfun)
