@@ -87,7 +87,7 @@ Compiler.prototype.pass2 = function (x) {
         x.a = this.pass2(x.a);
         x.b = this.pass2(x.b);
         if ((x.a.op === 'imm') && (x.b.op === 'imm'))
-            return {op: 'imm', n: this.eval(x.a.n, x.b.n, x.op)}
+            return {op: 'imm', n: eval(x.a.n, x.b.n, x.op)}
     }
     return x;
 };
